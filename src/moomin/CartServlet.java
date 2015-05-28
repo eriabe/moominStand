@@ -49,7 +49,7 @@ public class CartServlet extends HttpServlet {
         } else {
             numChecks = 0;
         }
-        try {
+        try {/*
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             String driverURL = "jdbc:derby://localhost:1527/shohin";
             Connection con = DriverManager.getConnection(driverURL, "db", "db");
@@ -75,7 +75,7 @@ public class CartServlet extends HttpServlet {
             con.close();
             request.setAttribute("count", numChecks);
             request.setAttribute("data", list);
-            request.setAttribute("total", total);
+            request.setAttribute("total", total);*/
             RequestDispatcher rd;
             if(numChecks == 0) {
                 rd = request.getRequestDispatcher("/nocheck.jsp");
